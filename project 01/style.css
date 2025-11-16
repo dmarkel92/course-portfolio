@@ -1,0 +1,146 @@
+/* ===========================
+   CSS VARIABLES
+=========================== */
+:root {
+    --bg: #0f0f0f;
+    --card-bg: #1d1d1d;
+    --accent: #4ade80; /* green */
+    --text: #f5f5f5;
+    --muted: #cccccc;
+    --transition: 0.3s ease;
+    --radius: 10px;
+    --spacing: 1.2rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin: 0;
+}
+
+/* NAVIGATION */
+.nav a {
+    color: var(--muted);
+    margin-left: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--accent);
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+.section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   SKILLS GRID
+=========================== */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.skill-card {
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    flex: 1 1 calc(33% - var(--spacing));
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+/* ===========================
+   PROJECTS GRID
+=========================== */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1rem;
+    flex: 1 1 calc(33% - var(--spacing));
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-6px);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+}
+
+.footer a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+   MEDIA QUERY
+=========================== */
+@media (max-width: 700px) {
+    .skills-grid, .project-grid {
+        flex-direction: column;
+    }
+}
