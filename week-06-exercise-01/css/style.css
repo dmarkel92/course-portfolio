@@ -1,0 +1,45 @@
+/* Custom centered navigation with buttons */
+.nav-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-custom ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;            /* flexbox requirement */
+  justify-content: center;  /* centered links */
+  gap: 24px;                /* spacing */
+}
+
+.nav-custom li {
+  margin: 0;
+}
+
+.nav-custom a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0066CC;     /* custom blue button */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;            /* rounded button look */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-custom a:hover {
+  background-color: #004499;
+  transform: translateY(-2px);   /* interactive hover animation */
+}
+
+/* Prevent content from being hidden under fixed nav */
+.nav-custom + main {
+  margin-top: 80px;
+}
